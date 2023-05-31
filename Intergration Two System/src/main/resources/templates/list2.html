@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table pt-5" id="tableStudent">
+    <tr>
+        <th>STT</th>
+        <th>address</th>
+        <th>ten</th>
+        <th>email</th>
+<!--        <th>Ngay dang</th>-->
+<!--        <th>Phong vien</th>-->
+        <th colspan="2">action</th>
+    </tr>
+    <tr th:each="st,it: ${employees}" th:object="${st}">
+        <td th:text="${it.count}"></td>
+        <td th:text="*{name}"></td>
+        <td th:text="*{email}"></td>
+<!--        <td th:text="*{#dates.format(ngayDangTin, 'dd-MM-yyyy')}"></td>-->
+<!--        <td th:text="*{phongVien}"></td>-->
+
+
+    </tr>
+</table>
+</body>
+</html>
